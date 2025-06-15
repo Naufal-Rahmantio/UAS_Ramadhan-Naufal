@@ -1,0 +1,651 @@
+/* Bagian: Reset dan Pengaturan Dasar */
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  background: #f2f2f2;
+  color: #333;
+}
+
+/* Bagian: Navigasi Atas (Header/Navbar) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0b132b;
+  color: white;
+}
+.navbar .logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.navbar a:hover,
+.navbar a.active {
+  color: #ffbf00;
+}
+
+/* Bagian: Hero (Bagian Atas dengan Gambar dan Judul) */
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, rgba(255, 191, 0, 0.8), rgba(255, 255, 255, 0.8)), url('assets/hero-museum.jpg') no-repeat right center;
+  background-size: cover;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  min-height: 320px;
+  color: #203a43;
+}
+.hero-bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 191, 0, 0.8), rgba(255, 255, 255, 0.8));
+  z-index: 1;
+}
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  color: #203a43;
+  text-align: left;
+  flex: 1 1 340px;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.hero-image {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  object-fit: cover;
+  background: #fff;
+  display: block;
+}
+.hero-image-right {
+  margin-left: 2rem;
+  order: 2;
+}
+.hero-image-left {
+  margin-right: 2rem;
+  order: 0;
+}
+
+/* Bagian: Tombol Utama */
+.btn-primary {
+  background: #ffbf00;
+  color: #111;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* Bagian: Showcase (Bagian Daftar Fitur atau Ruangan) */
+.showcase {
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, #fff 0%, #f7f8fa 100%);
+  text-align: center;
+}
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 250px;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Bagian: Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #0b132b;
+  color: white;
+  font-size: 0.9rem;
+}
+body.index footer {
+  background: #111;
+  padding: 1rem;
+}
+
+/* Bagian: Responsif untuk Hero */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 2.5rem 1rem;
+    min-height: 0;
+    text-align: center;
+  }
+  .hero-bg-gradient {
+    width: 100%;
+    height: 60%;
+    min-height: 180px;
+    max-height: 300px;
+    left: 0; right: 0; top: 0;
+  }
+  .hero-image {
+    margin: 1.5rem 0 0 0;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .hero-image img {
+    width: 90vw;
+    max-width: 340px;
+  }
+  .hero-image-right, .hero-image-left {
+    margin: 0;
+    order: unset;
+  }
+  .hero-text {
+    text-align: center;
+  }
+}
+
+/* Bagian: Event (Daftar Kegiatan/Acara) */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: #ffffff;
+}
+.event-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.event-card img {
+  width: 100%;
+  height: 340px;
+  max-height: 75vh;
+  object-fit: contain;
+  background: #fff;
+  display: block;
+}
+.event-content {
+  padding: 1.2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.event-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  color: #203a43;
+}
+.event-content .date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+.event-content p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Bagian: Koleksi (Daftar Koleksi Museum) */
+.collection-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: white;
+}
+.collection-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.collection-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.collection-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.collection-text {
+  padding: 1.2rem;
+}
+.collection-text h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #1e3c72;
+}
+.collection-text p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Bagian: Tentang (About) */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem 2rem;
+  background: white;
+  gap: 2rem;
+  align-items: center;
+}
+.about-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.about-text {
+  flex: 2 1 400px;
+}
+.about-text h2 {
+  margin-top: 1rem;
+  color: #0f2027;
+}
+.about-text ul {
+  padding-left: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Bagian: Tim (Struktur Organisasi) */
+.team-section {
+  background: #f9f9f9;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.team-member {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.team-member:hover {
+  transform: translateY(-5px);
+}
+.team-member img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.team-member h4 {
+  margin: 0.5rem 0 0.2rem;
+  color: #203a43;
+}
+
+/* Bagian: Hero Image Far Right (untuk gambar hero lebih ke kanan) */
+.hero-image-far-right {
+  margin-left: auto;
+  margin-right: 0;
+  order: 2;
+  max-width: 400px;
+  align-self: center; /* Ensure vertical centering */
+  display: flex;
+  align-items: center;
+  /* Optionally, for even closer to edge: */
+  /* right: 0; position: relative; */
+}
+@media (max-width: 900px) {
+  .hero-image-far-right {
+    margin: 1.5rem 0 0 0;
+    max-width: 100%;
+    align-self: center;
+  }
+}
+
+/* Bagian: Transisi Gradien Antar Section (Index) */
+.showcase {
+  /* Gradien transisi antara section */
+  background: linear-gradient(180deg, #fff 0%, #f7f8fa 100%);
+}
+.testimoni-section {
+  /* Gradien untuk section testimoni */
+  background: linear-gradient(180deg, #f7f8fa 0%, #e6eaff 100%);
+}
+.muspen-tv-section {
+  /* Gradien untuk section Muspen TV */
+  background: linear-gradient(180deg, #e6eaff 0%, #e6f0ff 100%);
+}
+.forum-section {
+  /* Gradien untuk section forum/artikel */
+  background: linear-gradient(180deg, #e6f0ff 0%, #fff 100%);
+}
+
+/* Bagian: Judul Section */
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.section-label {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #b3d1ff;
+  letter-spacing: 2px;
+  line-height: 1;
+  position: relative;
+  top: 8px;
+  opacity: 0.7;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+/* Bagian: Testimoni */
+.testimoni-section {
+  padding: 4rem 0 2rem 0;
+}
+.testimoni-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.testimoni-arrow {
+  background: linear-gradient(135deg, #ff6a6a, #ffb347);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimoni-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Bagian: Muspen TV */
+.muspen-tv-section {
+  padding: 4rem 0 2rem 0;
+}
+.muspen-tv-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.muspen-tv-main {
+  margin-bottom: 1.5rem;
+}
+.muspen-tv-thumbs {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.muspen-tv-section iframe {
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+}
+.muspen-tv-thumbs iframe {
+  border-radius: 8px;
+  box-shadow: none;
+}
+.muspen-tv-more {
+  margin-top: 2rem;
+}
+
+/* Bagian: Forum/Artikel */
+.forum-section {
+  padding: 4rem 0 2rem 0;
+}
+.forum-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.forum-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  width: 340px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+.forum-card-img-wrapper {
+  position: relative;
+}
+.forum-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.forum-card .label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #e26ee5;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.forum-card .content {
+  padding: 1.2rem;
+}
+.forum-card .date-comment {
+  font-size: 0.9rem;
+  color: #b36ff6;
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 8px;
+}
+.forum-card .title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Bagian: Underline Gradien pada Judul Section */
+.showcase h2,
+.testimoni-section h2,
+.muspen-tv-section h2,
+.forum-section h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-top: -0.7rem;
+  position: relative;
+  display: inline-block;
+}
+.showcase h2:before,
+.testimoni-section h2:before,
+.muspen-tv-section h2:before,
+.forum-section h2:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -6px;
+  left: 0;
+  background: linear-gradient(135deg, #ff6a6a, #ffb347);
+  border-radius: 2px;
+}
+
+/* Bagian: Carousel Ruang Pamer (Revolver) */
+.ruang-revolver-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  position: relative;
+  min-height: 340px;
+}
+.ruang-revolver-item {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  width: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+  transition: transform 0.6s cubic-bezier(.4,2,.3,1), opacity 0.5s;
+  z-index: 2;
+}
+.ruang-revolver-item.selected {
+  z-index: 3;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+  background: linear-gradient(135deg, #f9d423 0%, #ffbf00 100%);
+  color: #222;
+  opacity: 1;
+  transform: translateX(-50%) scale(1.08);
+}
+.ruang-revolver-item.spin-left {
+  animation: spinLeft 0.8s cubic-bezier(.4,2,.3,1);
+  z-index: 5;
+}
+.ruang-revolver-item.spin-right {
+  animation: spinRight 0.8s cubic-bezier(.4,2,.3,1);
+  z-index: 5;
+}
+@keyframes spinLeft {
+  0% { opacity: 1; transform: translateX(-50%) scale(1.08) rotate(0deg);}
+  30% { opacity: 1; transform: translateX(-80%) scale(0.95) rotate(-30deg);}
+  60% { opacity: 0.7; transform: translateX(-120%) scale(0.7) rotate(-80deg);}
+  100% { opacity: 0; transform: translateX(-180%) scale(0.4) rotate(-160deg);}
+}
+@keyframes spinRight {
+  0% { opacity: 1; transform: translateX(-50%) scale(1.08) rotate(0deg);}
+  30% { opacity: 1; transform: translateX(-20%) scale(0.95) rotate(30deg);}
+  60% { opacity: 0.7; transform: translateX(40%) scale(0.7) rotate(80deg);}
+  100% { opacity: 0; transform: translateX(100%) scale(0.4) rotate(160deg);}
+}
+.ruang-revolver-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  border: 4px solid #fffbe6;
+  background: #fff;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.ruang-arrow {
+  background: #ffbf00;
+  color: #222;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, transform 0.2s;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  user-select: none;
+}
+.ruang-arrow.ruang-arrow-left {
+  left: 500px;
+}
+.ruang-arrow.ruang-arrow-right {
+  right: 500px;
+}
+@media (max-width: 600px) {
+  .ruang-arrow.ruang-arrow-left {
+    left: -14px;
+  }
+  .ruang-arrow.ruang-arrow-right {
+    right: -14px;
+  }
+}
+

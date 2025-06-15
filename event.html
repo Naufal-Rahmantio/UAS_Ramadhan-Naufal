@@ -1,0 +1,85 @@
+<!-- event.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Muspen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header: Navigasi utama dan logo -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo-muspen.png" alt="MUSPEN Logo" style="height:40px;vertical-align:middle;">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="koleksi.html">Koleksi</a></li>
+        <li><a href="event.html" class="active">Event</a></li>
+        <li><a href="about.html">Tentang</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero: Bagian utama dengan judul, deskripsi, dan gambar -->
+  <section class="hero">
+    <div class="hero-bg-gradient"></div>
+    <div class="hero-text">
+      <h1>Event Terbaru</h1>
+      <p>Ikuti berbagai kegiatan menarik di Museum Penerangan</p>
+    </div>
+    <div class="hero-image hero-image-right hero-image-far-right">
+      <img src="assets/hero-museum3.jpg" alt="Museum Penerangan">
+    </div>
+  </section>
+
+  <!-- Event Grid: Daftar event/kegiatan -->
+  <section class="event-grid">
+    <!-- Setiap .event-card adalah satu event -->
+    <div class="event-card">
+      <img src="assets/event1.jpg" alt="Event 1">
+      <div class="event-content">
+        <h3>Muspen Talk: Animasi</h3>
+        <p class="date">30 Mar 2023 • 50 slot</p>
+        <p>Pelajar SMA dan SMK pecinta animasi merapat! Yuk ikut event seru ini!</p>
+      </div>
+    </div>
+    <div class="event-card">
+      <img src="assets/event2.jpg" alt="Event 2">
+      <div class="event-content">
+        <h3>3 Dekade Museum Penerangan</h3>
+        <p class="date">29 Apr 2023 • 500 slot</p>
+        <p>Peringatan ulang tahun Muspen ke-30! Acara spesial untuk semua pengunjung.</p>
+      </div>
+    </div>
+    <div class="event-card">
+      <img src="assets/event3.jpg" alt="Event 3">
+      <div class="event-content">
+        <h3>Ayo Beraksi! 2.0</h3>
+        <p class="date">22 Agu 2023 • 500 slot</p>
+        <p>Roadshow dan pertunjukan budaya dari Museum Penerangan di Banyuwangi.</p>
+      </div>
+    </div>
+    <div class="event-card">
+      <img src="assets/event4.jpg" alt="Event 4">
+      <div class="event-content">
+        <h3>Public Speaking untuk Jurnalis</h3>
+        <p class="date">25 Feb 2024 • 50 slot</p>
+        <p>Latihan public speaking untuk citizen journalism bersama narasumber profesional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer: Informasi hak cipta -->
+  <footer>
+    <p>&copy; 2025 Museum Penerangan</p>
+  </footer>
+  <!-- jQuery, React, ReactDOM, and main.js -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

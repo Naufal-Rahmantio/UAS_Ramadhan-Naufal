@@ -1,0 +1,167 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muspen - Beranda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ...existing code... */
+    .ruang-revolver-item.spin-left {
+      animation: spinLeft 0.8s cubic-bezier(.4,2,.3,1);
+      z-index: 5;
+    }
+    .ruang-revolver-item.spin-right {
+      animation: spinRight 0.8s cubic-bezier(.4,2,.3,1);
+      z-index: 5;
+    }
+    @keyframes spinLeft {
+      0% { opacity: 1; transform: translateX(-50%) scale(1.08) rotate(0deg);}
+      30% { opacity: 1; transform: translateX(-80%) scale(0.95) rotate(-30deg);}
+      60% { opacity: 0.7; transform: translateX(-120%) scale(0.7) rotate(-80deg);}
+      100% { opacity: 0; transform: translateX(-180%) scale(0.4) rotate(-160deg);}
+    }
+    @keyframes spinRight {
+      0% { opacity: 1; transform: translateX(-50%) scale(1.08) rotate(0deg);}
+      30% { opacity: 1; transform: translateX(-20%) scale(0.95) rotate(30deg);}
+      60% { opacity: 0.7; transform: translateX(40%) scale(0.7) rotate(80deg);}
+      100% { opacity: 0; transform: translateX(100%) scale(0.4) rotate(160deg);}
+    }
+    /* ...existing code... */
+  </style>
+</head>
+<body>
+  <!-- Header: Navigasi utama dan logo -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo-muspen.png" alt="MUSPEN Logo" style="height:40px;vertical-align:middle;">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="koleksi.html">Koleksi</a></li>
+        <li><a href="event.html">Event</a></li>
+        <li><a href="about.html">Tentang</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero: Bagian utama dengan judul, deskripsi, dan gambar -->
+  <section class="hero">
+    <div class="hero-bg-gradient"></div>
+    <div class="hero-text">
+      <h1>Halo Muspeners,</h1>
+      <p>Selamat datang di Museum Penerangan! Jelajahi sejarah dan budaya komunikasi Indonesia.</p>
+      <a href="#" class="btn-primary">Reservasi Kunjungan</a>
+    </div>
+    <div class="hero-image hero-image-right">
+      <img src="assets/hero-museum.jpg" alt="Museum Penerangan">
+    </div>
+  </section>
+
+  <!-- Showcase: Carousel Ruangan Pamer (Revolver) -->
+  <section class="showcase">
+    <h2>Ruangan Pamer</h2>
+    <div id="ruang-revolver-root"></div>
+    <div id="ruang-info-separate"></div>
+  </section>
+
+  <!-- Testimoni Section: Menampilkan testimoni pengunjung -->
+  <section class="testimoni-section">
+    <div class="section-title">
+      <div class="section-label">TESTIMONI</div>
+      <h2>Testimoni</h2>
+    </div>
+    <div class="testimoni-carousel">
+      <button class="testimoni-arrow" id="testimoni-prev" aria-label="Sebelumnya">&#x276E;</button>
+      <div id="testimoni-card" class="testimoni-card">
+        <!-- Testimoni content will be injected by JS -->
+      </div>
+      <button class="testimoni-arrow" id="testimoni-next" aria-label="Selanjutnya">&#x276F;</button>
+    </div>
+  </section>
+
+  <!-- Muspen TV Section: Video edukasi dan dokumentasi museum -->
+  <section class="muspen-tv-section">
+    <div class="section-title">
+      <div class="section-label">MUSPEN TV</div>
+      <h2>Muspen TV</h2>
+    </div>
+    <div class="muspen-tv-content">
+      <div class="muspen-tv-main">
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=9PFVoZhgiVA" title="Pasukan Pembasmi Hoax!" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="muspen-tv-thumbs">
+        <iframe width="260" height="146" src="https://www.youtube.com/watch?v=1RLQuiGBdDw" title="Siapakah Pak Be..." frameborder="0" allowfullscreen></iframe>
+        <iframe width="260" height="146" src="https://youtu.be/g0fpkhjOtLQ" title="Pernah Denger In..." frameborder="0" allowfullscreen></iframe>
+        <iframe width="260" height="146" src="https://youtu.be/6wvrxt74HHw" title="Terjebak di Huta..." frameborder="0" allowfullscreen></iframe>
+      </div>
+      <button class="btn-primary muspen-tv-more">Lihat Lainnya...</button>
+    </div>
+  </section>
+
+  <!-- Forum/Artikel Section: Artikel dan diskusi seputar museum -->
+  <section class="forum-section">
+    <div class="section-title">
+      <div class="section-label">ARTIKEL</div>
+      <h2>Forum</h2>
+    </div>
+    <div class="forum-cards">
+      <!-- Card 1 -->
+      <div class="forum-card">
+        <div class="forum-card-img-wrapper">
+          <img src="assets/forum1.jpg" alt="Forum 1">
+          <span class="label">MUSEUM</span>
+        </div>
+        <div class="content">
+          <div class="date-comment">
+            <span>&#128337; Mar Thu, 2023</span>
+            <span>&#128172; 233 Comment</span>
+          </div>
+          <div class="title">Kita adalah Sang Juara! Museum Penerangan Goes to...</div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="forum-card">
+        <div class="forum-card-img-wrapper">
+          <img src="assets/forum2.jpg" alt="Forum 2">
+          <span class="label">MUSEUM</span>
+        </div>
+        <div class="content">
+          <div class="date-comment">
+            <span>&#128337; Apr Mon, 2023</span>
+            <span>&#128172; 196 Comment</span>
+          </div>
+          <div class="title">Muspen Talk "Berkreasi Melalui Animasi"</div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="forum-card">
+        <div class="forum-card-img-wrapper">
+          <img src="assets/forum3.jpg" alt="Forum 3">
+          <span class="label">MUSEUM</span>
+        </div>
+        <div class="content">
+          <div class="date-comment">
+            <span>&#128337; May Wed, 2023</span>
+            <span>&#128172; 148 Comment</span>
+          </div>
+          <div class="title">BELAJAR DARI "PRINSIP-PRINSIP KEBENARAN JURNALIST...</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer: Informasi hak cipta -->
+  <footer>
+    <p>&copy; 2025 Museum Penerangan</p>
+  </footer>
+  <!-- jQuery, React, ReactDOM, and main.js -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
